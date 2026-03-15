@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Pyeria Bot - Home</title>
+<link rel="stylesheet" href="style.css">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+<!-- NAVBAR -->
+<nav class="navbar">
+  <div class="nav-brand">
+    <img src="https://cdn.discordapp.com/embed/avatars/0.png" alt="Pyeria" class="nav-logo">
+    <span>Pyeria</span>
+  </div>
+  <div class="nav-links">
+    <a href="index.html" class="active"><i class="fas fa-home"></i> Home</a>
+    <a href="addbot.html"><i class="fas fa-robot"></i> Add Bot</a>
+    <a href="https://dsc.gg/pyerox" target="_blank"><i class="fab fa-discord"></i> Support</a>
+  </div>
+  <div class="hamburger" onclick="toggleMenu()">
+    <span></span><span></span><span></span>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-bg"></div>
+  <div class="particles" id="particles"></div>
+  <div class="hero-content">
+    <div class="hero-badge">✨ 100+ Slash Commands</div>
+    <h1 class="hero-title">Meet <span class="gradient-text">Pyeria</span></h1>
+    <p class="hero-subtitle">The ultimate Discord bot for music, moderation, fun & more. Powered by Lavalink for crystal-clear audio.</p>
+    <div class="hero-buttons">
+      <a href="addbot.html" class="btn btn-primary"><i class="fas fa-plus"></i> Add to Discord</a>
+      <a href="https://dsc.gg/pyerox" target="_blank" class="btn btn-secondary"><i class="fab fa-discord"></i> Support Server</a>
+    </div>
+    <div class="hero-stats">
+      <div class="stat"><span class="stat-num">100+</span><span class="stat-label">Commands</span></div>
+      <div class="stat-divider"></div>
+      <div class="stat"><span class="stat-num">6</span><span class="stat-label">Categories</span></div>
+      <div class="stat-divider"></div>
+      <div class="stat"><span class="stat-num">24/7</span><span class="stat-label">Online</span></div>
+    </div>
+  </div>
+  <div class="hero-image">
+    <div class="bot-card">
+      <div class="bot-card-header">
+        <div class="bot-avatar">🌸</div>
+        <div>
+          <div class="bot-name">Pyeria Music#0301</div>
+          <div class="bot-status"><span class="status-dot"></span> Online</div>
+        </div>
+      </div>
+      <div class="bot-card-body">
+        <div class="cmd-preview">/play Blinding Lights</div>
+        <div class="cmd-response">🎵 Now Playing: <b>Blinding Lights</b></div>
+        <div class="cmd-preview">/help</div>
+        <div class="cmd-response">📖 100 commands available!</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FEATURES -->
+<section class="features">
+  <h2 class="section-title">Why Choose <span class="gradient-text">Pyeria?</span></h2>
+  <p class="section-sub">Everything you need in one powerful bot</p>
+  <div class="features-grid">
+    <div class="feature-card">
+      <div class="feature-icon music">🎵</div>
+      <h3>High Quality Music</h3>
+      <p>Crystal clear audio powered by Lavalink. Play from YouTube, SoundCloud & more with filters like Bassboost, Nightcore, Vaporwave!</p>
+    </div>
+    <div class="feature-card">
+      <div class="feature-icon mod">🔨</div>
+      <h3>Powerful Moderation</h3>
+      <p>Full moderation suite: ban, kick, timeout, warn, softban, massrole, channel lock/unlock and more!</p>
+    </div>
+    <div class="feature-card">
+      <div class="feature-icon fun">🎮</div>
+      <h3>Fun Commands</h3>
+      <p>Keep your server entertained with memes, jokes, 8ball, coin flip, rock-paper-scissors, cat & dog pics!</p>
+    </div>
+    <div class="feature-card">
+      <div class="feature-icon config">⚙️</div>
+      <h3>Easy Configuration</h3>
+      <p>Set up welcome messages, leave messages, auto roles, DJ roles and custom prefix easily!</p>
+    </div>
+    <div class="feature-card">
+      <div class="feature-icon playlist">📝</div>
+      <h3>Personal Playlists</h3>
+      <p>Create, manage and play your own custom playlists. Save your favourite songs and play them anytime!</p>
+    </div>
+    <div class="feature-card">
+      <div class="feature-icon slash">⚡</div>
+      <h3>Slash + Prefix</h3>
+      <p>Use modern slash commands (/) or classic prefix (!) — both fully supported with 100 commands each!</p>
+    </div>
+  </div>
+</section>
+
+<!-- COMMANDS SHOWCASE -->
+<section class="commands-section">
+  <h2 class="section-title">Command <span class="gradient-text">Categories</span></h2>
+  <div class="cmd-tabs">
+    <button class="tab-btn active" onclick="showTab('music')">🎵 Music</button>
+    <button class="tab-btn" onclick="showTab('mod')">🔨 Moderation</button>
+    <button class="tab-btn" onclick="showTab('fun')">🎮 Fun</button>
+    <button class="tab-btn" onclick="showTab('utility')">🛠️ Utility</button>
+    <button class="tab-btn" onclick="showTab('info')">ℹ️ Info</button>
+    <button class="tab-btn" onclick="showTab('config')">⚙️ Config</button>
+  </div>
+  <div class="cmd-content">
+    <div id="music" class="tab-panel active">
+      <div class="cmd-grid">
+        <span class="cmd-tag">/play</span><span class="cmd-tag">/skip</span><span class="cmd-tag">/stop</span>
+        <span class="cmd-tag">/pause</span><span class="cmd-tag">/resume</span><span class="cmd-tag">/volume</span>
+        <span class="cmd-tag">/queue</span><span class="cmd-tag">/nowplaying</span><span class="cmd-tag">/loop</span>
+        <span class="cmd-tag">/shuffle</span><span class="cmd-tag">/bassboost</span><span class="cmd-tag">/nightcore</span>
+        <span class="cmd-tag">/vaporwave</span><span class="cmd-tag">/search</span><span class="cmd-tag">/autoplay</span>
+        <span class="cmd-tag">/seek</span><span class="cmd-tag">/forward</span><span class="cmd-tag">/rewind</span>
+        <span class="cmd-tag">/skipto</span><span class="cmd-tag">/247</span>
+      </div>
+    </div>
+    <div id="mod" class="tab-panel">
+      <div class="cmd-grid">
+        <span class="cmd-tag">/ban</span><span class="cmd-tag">/kick</span><span class="cmd-tag">/purge</span>
+        <span class="cmd-tag">/timeout</span><span class="cmd-tag">/warn</span><span class="cmd-tag">/softban</span>
+        <span class="cmd-tag">/lock</span><span class="cmd-tag">/unlock</span><span class="cmd-tag">/slowmode</span>
+        <span class="cmd-tag">/massrole</span><span class="cmd-tag">/roleadd</span><span class="cmd-tag">/roleremove</span>
+        <span class="cmd-tag">/nick</span><span class="cmd-tag">/untimeout</span>
+      </div>
+    </div>
+    <div id="fun" class="tab-panel">
+      <div class="cmd-grid">
+        <span class="cmd-tag">/meme</span><span class="cmd-tag">/joke</span><span class="cmd-tag">/fact</span>
+        <span class="cmd-tag">/quote</span><span class="cmd-tag">/8ball</span><span class="cmd-tag">/coinflip</span>
+        <span class="cmd-tag">/dice</span><span class="cmd-tag">/rps</span><span class="cmd-tag">/cat</span>
+        <span class="cmd-tag">/dog</span><span class="cmd-tag">/giveaway</span>
+      </div>
+    </div>
+    <div id="utility" class="tab-panel">
+      <div class="cmd-grid">
+        <span class="cmd-tag">/avatar</span><span class="cmd-tag">/banner</span><span class="cmd-tag">/snipe</span>
+        <span class="cmd-tag">/poll</span><span class="cmd-tag">/embed</span><span class="cmd-tag">/announce</span>
+        <span class="cmd-tag">/roleinfo</span><span class="cmd-tag">/channelinfo</span><span class="cmd-tag">/emojiinfo</span>
+        <span class="cmd-tag">/serverbanner</span><span class="cmd-tag">/servericon</span><span class="cmd-tag">/say</span>
+        <span class="cmd-tag">/afk</span><span class="cmd-tag">/color</span>
+      </div>
+    </div>
+    <div id="info" class="tab-panel">
+      <div class="cmd-grid">
+        <span class="cmd-tag">/help</span><span class="cmd-tag">/botinfo</span><span class="cmd-tag">/serverinfo</span>
+        <span class="cmd-tag">/userinfo</span><span class="cmd-tag">/ping</span><span class="cmd-tag">/stats</span>
+        <span class="cmd-tag">/uptime</span><span class="cmd-tag">/invite</span><span class="cmd-tag">/support</span>
+        <span class="cmd-tag">/rank</span><span class="cmd-tag">/leaderboard</span>
+      </div>
+    </div>
+    <div id="config" class="tab-panel">
+      <div class="cmd-grid">
+        <span class="cmd-tag">/setwelcome</span><span class="cmd-tag">/setleave</span><span class="cmd-tag">/setautorole</span>
+        <span class="cmd-tag">/setdjrole</span><span class="cmd-tag">/setprefix</span><span class="cmd-tag">/createplaylist</span>
+        <span class="cmd-tag">/myplaylists</span><span class="cmd-tag">/playplaylist</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="footer">
+  <div class="footer-content">
+    <div class="footer-brand">
+      <div class="footer-logo">🌸 Pyeria</div>
+      <p>The ultimate Discord bot by primeshoaib12</p>
+      <div class="footer-links">
+        <a href="https://dsc.gg/pyerox" target="_blank"><i class="fab fa-discord"></i></a>
+        <a href="https://github.com/shoaibi181832dev" target="_blank"><i class="fab fa-github"></i></a>
+      </div>
+    </div>
+    <div class="footer-nav">
+      <h4>Navigation</h4>
+      <a href="index.html">Home</a>
+      <a href="addbot.html">Add Bot</a>
+    </div>
+    <div class="footer-nav">
+      <h4>Links</h4>
+      <a href="https://dsc.gg/pyerox" target="_blank">Support Server</a>
+      <a href="https://discord.com/oauth2/authorize?client_id=1482292165748199454&permissions=8&scope=bot%20applications.commands" target="_blank">Invite Bot</a>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <p>© 2025 Pyeria Bot — Made with ❤️ by <strong>primeshoaib12</strong></p>
+  </div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
