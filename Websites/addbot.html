@@ -1,1 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Pyeria Bot - Add Bot</title>
+<link rel="stylesheet" href="style.css">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+<nav class="navbar">
+  <div class="nav-brand">
+    <img src="https://cdn.discordapp.com/embed/avatars/0.png" alt="Pyeria" class="nav-logo">
+    <span>Pyeria</span>
+  </div>
+  <div class="nav-links">
+    <a href="index.html"><i class="fas fa-home"></i> Home</a>
+    <a href="addbot.html" class="active"><i class="fas fa-robot"></i> Add Bot</a>
+    <a href="dashboard.html"><i class="fas fa-tachometer-alt"></i> Dashboard</a>
+    <a href="https://dsc.gg/pyerox" target="_blank"><i class="fab fa-discord"></i> Support</a>
+  </div>
+  <div class="hamburger" onclick="toggleMenu()">
+    <span></span><span></span><span></span>
+  </div>
+</nav>
 
+<section class="page-hero">
+  <h1>Add <span class="gradient-text">Pyeria</span> to Your Server</h1>
+  <p>Get started in seconds — just click the button below!</p>
+</section>
+
+<section class="addbot-section">
+  <div class="addbot-container">
+    <!-- Invite Card -->
+    <div class="invite-card">
+      <div class="invite-icon">🌸</div>
+      <h2>Pyeria Bot</h2>
+      <p class="invite-desc">100+ slash commands, music, moderation, fun & much more!</p>
+      <div class="perms-list">
+        <h4>Permissions Required:</h4>
+        <div class="perm-item"><i class="fas fa-check perm-ok"></i> Administrator (Recommended)</div>
+        <div class="perm-item"><i class="fas fa-check perm-ok"></i> Manage Channels</div>
+        <div class="perm-item"><i class="fas fa-check perm-ok"></i> Manage Roles</div>
+        <div class="perm-item"><i class="fas fa-check perm-ok"></i> Send Messages</div>
+        <div class="perm-item"><i class="fas fa-check perm-ok"></i> Connect & Speak (Voice)</div>
+        <div class="perm-item"><i class="fas fa-check perm-ok"></i> Embed Links</div>
+      </div>
+      <a href="https://discord.com/oauth2/authorize?client_id=1482292165748199454&permissions=8&scope=bot%20applications.commands" target="_blank" class="btn btn-primary btn-large">
+        <i class="fab fa-discord"></i> Add to Discord
+      </a>
+      <p class="invite-note">You need <strong>Manage Server</strong> permission to add bots</p>
+    </div>
+
+    <!-- Steps -->
+    <div class="steps-container">
+      <h2>How to Add <span class="gradient-text">Pyeria</span></h2>
+      <div class="steps">
+        <div class="step">
+          <div class="step-num">1</div>
+          <div class="step-content">
+            <h4>Click the Invite Button</h4>
+            <p>Click "Add to Discord" button to start the authorization process.</p>
+          </div>
+        </div>
+        <div class="step">
+          <div class="step-num">2</div>
+          <div class="step-content">
+            <h4>Select Your Server</h4>
+            <p>Choose the server you want to add Pyeria to from the dropdown menu.</p>
+          </div>
+        </div>
+        <div class="step">
+          <div class="step-num">3</div>
+          <div class="step-content">
+            <h4>Authorize Permissions</h4>
+            <p>Review and accept the permissions required for Pyeria to function properly.</p>
+          </div>
+        </div>
+        <div class="step">
+          <div class="step-num">4</div>
+          <div class="step-content">
+            <h4>You're Done!</h4>
+            <p>Pyeria is now in your server! Use <code>/help</code> or <code>!help</code> to get started.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Quick Setup -->
+      <div class="quick-setup">
+        <h3>⚡ Quick Setup Commands</h3>
+        <div class="setup-cmd">
+          <code>/setwelcome #channel Welcome {user}!</code>
+          <span>Set welcome messages</span>
+        </div>
+        <div class="setup-cmd">
+          <code>/setautorole @Member</code>
+          <span>Auto assign roles</span>
+        </div>
+        <div class="setup-cmd">
+          <code>/setdjrole @DJ</code>
+          <span>Set music DJ role</span>
+        </div>
+        <div class="setup-cmd">
+          <code>/play Believer</code>
+          <span>Start playing music</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section class="faq-section">
+  <h2 class="section-title">Frequently Asked <span class="gradient-text">Questions</span></h2>
+  <div class="faq-container">
+    <div class="faq-item">
+      <div class="faq-q" onclick="toggleFaq(this)">
+        <span>Is Pyeria free to use?</span><i class="fas fa-chevron-down"></i>
+      </div>
+      <div class="faq-a">Yes! Pyeria is completely free. All 100+ commands are available without any subscription.</div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-q" onclick="toggleFaq(this)">
+        <span>How do I play music?</span><i class="fas fa-chevron-down"></i>
+      </div>
+      <div class="faq-a">Join a voice channel and use <code>/play &lt;song name or URL&gt;</code>. Pyeria supports YouTube, SoundCloud and more!</div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-q" onclick="toggleFaq(this)">
+        <span>What prefix does Pyeria use?</span><i class="fas fa-chevron-down"></i>
+      </div>
+      <div class="faq-a">Default prefix is <code>!</code>. You can also use slash commands with <code>/</code>. Change prefix with <code>/setprefix</code>.</div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-q" onclick="toggleFaq(this)">
+        <span>How do I get support?</span><i class="fas fa-chevron-down"></i>
+      </div>
+      <div class="faq-a">Join our support server at <a href="https://dsc.gg/pyerox" target="_blank">dsc.gg/pyerox</a> or use <code>/support</code> command.</div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-q" onclick="toggleFaq(this)">
+        <span>Can I create playlists?</span><i class="fas fa-chevron-down"></i>
+      </div>
+      <div class="faq-a">Yes! Use <code>/createplaylist</code> to create a playlist, <code>/addsong</code> to add songs, and <code>/playplaylist</code> to play it!</div>
+    </div>
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="footer-content">
+    <div class="footer-brand">
+      <div class="footer-logo">🌸 Pyeria</div>
+      <p>The ultimate Discord bot by primeshoaib12</p>
+    </div>
+    <div class="footer-nav">
+      <h4>Navigation</h4>
+      <a href="index.html">Home</a>
+      <a href="addbot.html">Add Bot</a>
+      <a href="dashboard.html">Dashboard</a>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <p>© 2025 Pyeria Bot — Made with ❤️ by <strong>primeshoaib12</strong></p>
+  </div>
+</footer>
+<script src="script.js"></script>
+</body>
+                                                                                </html>
+        
